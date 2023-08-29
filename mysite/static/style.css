@@ -124,13 +124,20 @@ main .container .link_items a.medium {
     color: #424242;
     margin-right: 25px;
     font-weight: 700;
+    cursor:pointer;
 }
 
 .blog_articles_list .container .articles a.active {
     color: #D05270;
     border-bottom:2px solid #D05270;
+    cursor:pointer;
 }
 
+
+.blog_articles_list .container .articles a :hover {
+    cursor:pointer;
+   
+}
 
 .item_cards {
     margin-top: 8%;
@@ -145,6 +152,9 @@ main .container .link_items a.medium {
 
 .item_cards .container {
     padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
    
 }
 
@@ -167,7 +177,9 @@ main .container .link_items a.medium {
     font-size: 24px;
 }
 
-
+.item_cards .container p {
+    height: 90px;
+}
 .item_cards .container #read_more {
     border-bottom: 2px solid  #D05270;
     display: inline-block;

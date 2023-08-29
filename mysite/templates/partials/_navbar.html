@@ -1,0 +1,49 @@
+<nav>
+    <div class="container">
+        <div class="left_side_items">            
+            <a href="index.html" id="logo">Jr. Furkan Semiz</a>
+            <img src="../static/images/HireMe.svg" alt="Hire Me" >
+        </div>
+
+        <div class="items">
+            <a href="{% url 'index'%}"
+                {% if request.path == '/'%}
+                    class="active"
+                {%else%}
+                    class=""
+                {%endif%}              
+            >Home </a>
+            <a href="{% url 'blog'%}" 
+            
+                {% if 'blog' in request.path%}
+                    class="active"
+                {%else%}
+                    class=""
+                {%endif%}       
+             >Blog</a>
+            <a href="{% url 'search'%}"
+                {% if 'search' in request.path %}
+                    class="active"
+                {%else%}
+                    class=""
+                {%endif%}       
+             >CV</a>
+            <a href="{% url 'index' %}"
+                {% if 'about' in request.path%}
+                    class="active"
+                {%else%}
+                    class=""
+                {%endif%}       
+             >About Me</a>
+            <a href="{% url 'index'%}"
+                {% if 'contact' in request.path%}
+                    class="active"
+                {%else%}
+                    class=""
+                {%endif%}       
+             >Contact</a>
+        </div>
+    </div>
+
+</nav>
+
